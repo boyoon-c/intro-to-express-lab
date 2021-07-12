@@ -1,14 +1,17 @@
-//import modules
+// Import modules
 import express from 'express'
 import * as racerDb from './data/racers-db.js'
-//create express app
+
+// Create express app
 const app = express()
-//configure the app
+
+// Configure the app
 app.set('view engine', 'ejs')
-//mount middleware
+
+// Mount middleware
 
 
-//mount routes
+// Mount routes
 app.get('/racers', function(req,res){
     racerDb.find({}, function(error, racers){
         res.render('racers/index',{
