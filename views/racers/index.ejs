@@ -7,18 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Racers</h1>
+    <h1>F1 Drivers</h1>
     <% if(error){ %>
         <h2><%= error %> </h2>
     <% } %> 
-    <ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Driver Name</th>
+                <th>Team</th>
+                <th>2021 Driver Standing</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
         <% racers.forEach(function(racer) { %>
-            <li>
+            <td>
                 <%= racer.name %> 
-                --- 
+            </td>
+            <td> 
                 <%= racer.team %> 
-            </li>
+            </td>
+            <td> 
+                <%= racer.pos %> 
+            </td>
+        </tr>
         <% }) %> 
-    </ul>
+        </tobdy>
+    </table>
 </body>
 </html>
